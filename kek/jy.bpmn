@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:sbt="http://com.sbt/bpms/modeler" xmlns:activiti="http://activiti.org/bpmn" id="Definitions_002a169" targetNamespace="https://sbertech.ru/bpm/bpmn/1.0" exporter="Platform V Flow Designer" exporterVersion="5.0.0">
-  <bpmn2:process id="Process_96feda2" name="jy" isExecutable="true" sbt:bamProjectId="" sbt:businessFamily="" sbt:externalVersion="" sbt:maskPatterns="" sbt:contextVisible="false" sbt:processOwner.roleCode="">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:sbt="http://com.sbt/bpms/modeler" xmlns:activiti="http://activiti.org/bpmn" id="Definitions_002a169" targetNamespace="https://sbertech.ru/bpm/bpmn/1.0" exporter="Platform V Flow Designer" exporterVersion="5.5.0">
+  <bpmn2:process id="Process_96feda2" name="jy" isExecutable="true" sbt:bamProjectId="" sbt:businessFamily="" sbt:externalVersion="" sbt:contextVisible="false" sbt:maskPatterns="" sbt:processOwner.roleCode="">
     <bpmn2:startEvent id="Event_5d1b199" name="Start" sbt:marker.type="Markable" sbt:sbtType="com.sbt.bpms.modeler.plugin.marker.markableStartEvent">
       <bpmn2:outgoing>Flow_ab8d35c</bpmn2:outgoing>
     </bpmn2:startEvent>
     <bpmn2:task id="Activity_18a1b42" name="Go">
       <bpmn2:incoming>Flow_ab8d35c</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_0hnma4r</bpmn2:outgoing>
     </bpmn2:task>
     <bpmn2:sequenceFlow id="Flow_ab8d35c" name="" sourceRef="Event_5d1b199" targetRef="Activity_18a1b42" />
+    <bpmn2:endEvent id="Event_05b4j24" name="" sbt:marker.type="Markable" sbt:sbtType="com.sbt.bpms.modeler.plugin.marker.markableEndEvent">
+      <bpmn2:incoming>Flow_0hnma4r</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="Flow_0hnma4r" name="" sourceRef="Activity_18a1b42" targetRef="Event_05b4j24" />
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="Diagram">
     <bpmndi:BPMNPlane id="Plane" bpmnElement="Process_96feda2">
@@ -25,6 +30,13 @@
         <dc:Bounds x="240" y="80" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_05b4j24_di" bpmnElement="Event_05b4j24">
+        <dc:Bounds x="392" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0hnma4r_di" bpmnElement="Flow_0hnma4r">
+        <di:waypoint x="340" y="120" />
+        <di:waypoint x="392" y="120" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn2:definitions>
